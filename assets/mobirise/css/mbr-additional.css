@@ -835,6 +835,18 @@ body {
 .jq-selectbox:hover .jq-selectbox__trigger-arrow {
   border-top-color: #66458e;
 }
+#custom-html-l {
+  /* Type valid CSS here */
+}
+#custom-html-l div {
+  padding: 80px 0;
+  color: #777;
+  text-align: center;
+}
+#custom-html-l p {
+  font-size: 60px;
+  color: #777;
+}
 .cid-rbpj2HAJHn .dropdown-item:before {
   font-family: MobiriseIcons !important;
   content: '\e966';
