@@ -1057,6 +1057,18 @@ body {
   font-size: 60px;
   color: #777;
 }
+#custom-html-r {
+  /* Type valid CSS here */
+}
+#custom-html-r div {
+  padding: 80px 0;
+  color: #777;
+  text-align: center;
+}
+#custom-html-r p {
+  font-size: 60px;
+  color: #777;
+}
 .cid-rbpj2HAJHn .dropdown-item:before {
   font-family: MobiriseIcons !important;
   content: '\e966';
@@ -1744,7 +1756,7 @@ body {
 .cid-rbrMKsDNCZ {
   padding-top: 225px;
   padding-bottom: 225px;
-  background-image: url("../../../assets/images/top-thay-3-1200x1600.jpg");
+  background-image: url("../../../assets/images/p-20210124.png");
 }
 @media (max-width: 768px) {
   .cid-rbrMKsDNCZ .mbr-text,
@@ -1872,60 +1884,10 @@ body {
     padding-bottom: 2rem;
   }
 }
-.cid-rY3R69jCFw {
-  padding-top: 45px;
-  padding-bottom: 30px;
-  background-color: #ffffff;
-}
-.cid-rY3R69jCFw .container-fluid {
-  padding: 0 3rem;
-}
-.cid-rY3R69jCFw ul.list-inline {
-  margin: 0;
-  -webkit-align-self: center;
-  align-self: center;
-}
-.cid-rY3R69jCFw ul.list-inline li {
-  margin: 0;
-  padding: .5rem;
-}
-.cid-rY3R69jCFw ul.list-inline img {
-  max-width: 6rem;
-  padding-bottom: .5rem;
-}
-.cid-rY3R69jCFw ul.list-inline img:hover {
-  -webkit-filter: none;
-  -moz-filter: none;
-  -ms-filter: none;
-  -o-filter: none;
-  filter: none;
-}
-@media (max-width: 767px) {
-  .cid-rY3R69jCFw .container-fluid {
-    padding: 0 1rem;
-  }
-  .cid-rY3R69jCFw .list-inline-item img {
-    max-width: 5rem;
-  }
-}
-.cid-rY3R69jCFw .underline {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-.cid-rY3R69jCFw .underline .line {
-  width: 5rem;
-  height: 3px;
-  background: linear-gradient(90deg, #66458e, #ff1b05);
-  display: inline-block;
-}
-.cid-rY3R69jCFw .mbr-section-title,
-.cid-rY3R69jCFw .underline {
-  color: #a38dfd;
-}
 .cid-rbrMvErWhw {
   padding-top: 45px;
   padding-bottom: 45px;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 @media (max-width: 767px) {
   .cid-rbrMvErWhw .content {
@@ -1979,27 +1941,27 @@ body {
 }
 .cid-rbrMvErWhw .form-control {
   min-height: auto;
-  color: #ffffff !important;
+  color: #e96188 !important;
   border: none;
   border-radius: 0 !important;
   background-color: transparent;
   padding: .5rem 0rem;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #e96188;
 }
 .cid-rbrMvErWhw .form-control:focus {
   outline: none;
 }
 .cid-rbrMvErWhw input::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #e96188;
 }
 .cid-rbrMvErWhw input::-moz-placeholder {
-  color: #ffffff;
+  color: #e96188;
 }
 .cid-rbrMvErWhw textarea::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #e96188;
 }
 .cid-rbrMvErWhw textarea::-moz-placeholder {
-  color: #ffffff;
+  color: #e96188;
 }
 .cid-rbrMvErWhw .list {
   list-style-type: none;
@@ -2031,7 +1993,13 @@ body {
   }
 }
 .cid-rbrMvErWhw .mbr-footer-list {
-  color: #ff1b05;
+  color: #e96188;
+}
+.cid-rbrMvErWhw .footer-main-title {
+  color: #e96188;
+}
+.cid-rbrMvErWhw .footer-title {
+  color: #e96188;
 }
 .cid-rFQyFXcZHR {
   background-image: url("../../../assets/images/bg-site-huarleystudios-2000x1125.png");
