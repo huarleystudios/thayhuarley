@@ -1033,15 +1033,15 @@ body {
 .cid-s2vHvREdiS .mbr-overlay ~ .container-slide {
   z-index: auto;
 }
-#custom-html-p {
+#custom-html-q {
   /* Type valid CSS here */
 }
-#custom-html-p div {
+#custom-html-q div {
   padding: 80px 0;
   color: #777;
   text-align: center;
 }
-#custom-html-p p {
+#custom-html-q p {
   font-size: 60px;
   color: #777;
 }

@@ -54,7 +54,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "siteUrl": "https://thayhuarley.com",
-    "uniqCompNum": 26,
+    "uniqCompNum": 27,
     "versionPublish": "4.12.4",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
@@ -392,16 +392,17 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<iframe src=\"https://open.spotify.com/embed/playlist/2qi2LU51yNeQA1YB20sBbk\" width=\"100%\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>",
+          "_customHTML": "<iframe width=\"100%\" height=\"720\" src=\"https://www.youtube.com/embed/GuDCRWBcQ-k\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe>",
           "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
           "alias": "code-editor",
           "_tags": [
             "Extension"
           ],
           "_name": "pro.custom-html",
-          "_anchor": "custom-html-p",
+          "_JSplaceholders": [],
           "_PHPplaceholders": [],
-          "_JSplaceholders": []
+          "_params": {},
+          "_anchor": "custom-html-q"
         },
         {
           "_customTemplate": true,
