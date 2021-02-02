@@ -106,8 +106,6 @@ body {
   left: 0%;
   top: 0%;
   opacity: 1;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
 }
 .btn:hover:after,
 .btn:focus:after,
@@ -570,19 +568,6 @@ a.text-black:focus {
 .alert-danger {
   background-color: #59cf53;
 }
-.mbr-section-btn a.btn:not(.btn-form) {
-  border-radius: 100px;
-  transition-property: background-color, color, border-color, box-shadow;
-  transition-duration: .3s,.3s,.3s,.8s;
-  transition-timing-function: ease-in-out;
-}
-.mbr-section-btn a.btn:not(.btn-form):hover,
-.mbr-section-btn a.btn:not(.btn-form):focus {
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
-}
-.mbr-gallery-filter li a {
-  border-radius: 100px !important;
-}
 .mbr-gallery-filter li.active .btn {
   background-color: #66458e;
   border-color: #66458e;
@@ -590,9 +575,6 @@ a.text-black:focus {
 }
 .mbr-gallery-filter li.active .btn:focus {
   box-shadow: none;
-}
-.nav-tabs .nav-link {
-  border-radius: 100px !important;
 }
 .btn-form {
   border-radius: 0;
@@ -754,22 +736,6 @@ pre {
 .mbr-form .btn {
   margin: .4rem 0;
 }
-.mbr-form .input-group-btn a.btn {
-  border-radius: 100px !important;
-}
-.mbr-form .input-group-btn a.btn:hover {
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
-}
-.mbr-form .input-group-btn button[type="submit"] {
-  border-radius: 100px !important;
-  padding: 1rem 2rem;
-}
-.mbr-form .input-group-btn button[type="submit"]:hover {
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
-}
-.special-form {
-  border-radius: 100px !important;
-}
 @media (max-width: 767px) {
   .btn {
     font-size: .75rem !important;
@@ -791,7 +757,6 @@ pre {
   border-color: #66458e;
   color: #232323;
   cursor: pointer;
-  border-radius: 100px;
 }
 .btn-social i {
   top: 0;
@@ -804,12 +769,6 @@ pre {
 }
 .btn-social + .btn {
   margin-left: .1rem;
-}
-.input-group-btn button[type="submit"] {
-  border-radius: 100px !important;
-}
-.input-group-btn a.btn {
-  border-radius: 100px !important;
 }
 /* Footer */
 .note-air-layout .dropup .dropdown-menu,
@@ -1074,15 +1033,15 @@ body {
 .cid-s2vHvREdiS .mbr-overlay ~ .container-slide {
   z-index: auto;
 }
-#custom-html-n {
+#custom-html-p {
   /* Type valid CSS here */
 }
-#custom-html-n div {
+#custom-html-p div {
   padding: 80px 0;
   color: #777;
   text-align: center;
 }
-#custom-html-n p {
+#custom-html-p p {
   font-size: 60px;
   color: #777;
 }
