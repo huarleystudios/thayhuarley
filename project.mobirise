@@ -325,7 +325,7 @@
           "_global": false,
           "_once": false,
           "_params": {
-            "slides__autoplay": true,
+            "slides__autoplay": "hover",
             "slides__autoplayInterval": 4000,
             "slides__showBullets": true,
             "slides": [
@@ -350,7 +350,7 @@
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/top-thay-nov-20.jpg",
-                "active": true,
+                "active": false,
                 "showButtons": false,
                 "showText": false,
                 "showTitle": false,
@@ -369,12 +369,12 @@
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/top2-vestido.jpg",
-                "active": false,
-                "showButtons": true,
-                "showText": true,
+                "active": true,
+                "showButtons": false,
+                "showText": false,
                 "showTitle": false,
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "playVideo": true,
+                "videoUrl": "https://youtu.be/Qs9P4wg2ZD0",
                 "customStyle1": "display-1",
                 "customStyle2": "display-5",
                 "customStyle3": "display-4",
