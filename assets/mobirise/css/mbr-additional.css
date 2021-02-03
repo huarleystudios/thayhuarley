@@ -1057,6 +1057,18 @@ body {
   font-size: 60px;
   color: #777;
 }
+#custom-html-x {
+  /* Type valid CSS here */
+}
+#custom-html-x div {
+  padding: 80px 0;
+  color: #777;
+  text-align: center;
+}
+#custom-html-x p {
+  font-size: 60px;
+  color: #777;
+}
 #custom-html-r {
   /* Type valid CSS here */
 }

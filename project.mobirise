@@ -54,7 +54,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "siteUrl": "https://thayhuarley.com",
-    "uniqCompNum": 28,
+    "uniqCompNum": 34,
     "versionPublish": "4.12.4",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
@@ -415,6 +415,20 @@
           ],
           "_name": "pro.custom-html",
           "_anchor": "custom-html-m",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<iframe width=\"100%\" height=\"600\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1205318317&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/huarley-e-thay\" title=\"Huarley E-Thay\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Huarley E-Thay</a> · <a href=\"https://soundcloud.com/huarley-e-thay/sets/thay-huarley-favoritas\" title=\"Thay Huarley Favoritas\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Thay Huarley Favoritas</a></div>",
+          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-x",
           "_PHPplaceholders": [],
           "_JSplaceholders": []
         },
