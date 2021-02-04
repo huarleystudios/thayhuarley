@@ -54,7 +54,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "siteUrl": "https://thayhuarley.com",
-    "uniqCompNum": 45,
+    "uniqCompNum": 46,
     "versionPublish": "4.12.4",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
@@ -879,20 +879,29 @@
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            ".play": {
-              "width": "0",
-              "height": "0",
-              "border-style": "solid",
-              "border-width": "10px 0 10px 15px",
-              "@newColor": "contrast(@playColor)",
-              "border-color": "transparent transparent transparent @newColor",
-              "margin-right": "-3px"
+            ".mbr-section-subtitle": {
+              "color": "#ff1b05"
+            },
+            ".mbr-section-title,.mbr-text,.icon-description": {
+              "color": "#465052"
             },
             ".mbr-media": {
-              "display": "inline-block",
-              "width": "100%"
+              "display": "flex",
+              "& when (@buttonsAlign = \"left\")": {
+                "-webkit-justify-content": "flex-start",
+                "justify-content": "flex-start"
+              },
+              "& when (@buttonsAlign = \"center\")": {
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              },
+              "& when (@buttonsAlign = \"right\")": {
+                "-webkit-justify-content": "flex-end",
+                "justify-content": "flex-end"
+              }
             },
             ".modalWindow": {
+              "display": "none",
               "position": "fixed",
               "z-index": "5000",
               "left": "0",
@@ -924,7 +933,18 @@
                 "color": "#ffffff"
               }
             },
+            ".play": {
+              "width": "0",
+              "height": "0",
+              "border-style": "solid",
+              "border-width": "10px 0 10px 15px",
+              "@newColor": "contrast(@playColor)",
+              "border-color": "transparent transparent transparent @newColor",
+              "margin-right": "-3px"
+            },
             ".btn-play": {
+              "-webkit-flex-shrink": "0",
+              "flex-shrink": "0",
               "position": "relative",
               "background": "@playColor",
               "width": "60px",
@@ -957,11 +977,32 @@
                 "left": "-25%",
                 "top": "-25%",
                 "opacity": "1",
-                "-webkit-animation": "1s play-video linear infinite",
-                "animation": "1s play-video linear infinite"
+                "-webkit-animation": "1s btn-video linear infinite",
+                "animation": "1s btn-video linear infinite"
               }
             },
-            "@keyframes play-video": {
+            "@media (min-width: 768px)": {
+              ".mbr-section-btn": {
+                "& when (@showVideo)": {
+                  "padding-left": "1.5rem"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".mbr-section-subtitle,.mbr-section-title, .mbr-text": {
+                "text-align": "center !important"
+              },
+              ".mbr-media": {
+                "-webkit-flex-direction": "column",
+                "flex-direction": "column",
+                "-webkit-align-items": "center",
+                "align-items": "center"
+              },
+              ".btn-play": {
+                "margin-bottom": "2rem"
+              }
+            },
+            "@keyframes btn-video": {
               "0%": {
                 "transform": "scale(0.68)"
               },
@@ -970,7 +1011,7 @@
                 "opacity": "0"
               }
             },
-            "@-webkit-keyframes play-video": {
+            "@-webkit-keyframes btn-video": {
               "0%": {
                 "-webkit-transform": "scale(0.68)"
               },
@@ -978,16 +1019,24 @@
                 "-webkit-transform": "scale(1.2)",
                 "-webkit-opacity": "0"
               }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
             }
           },
-          "_name": "info2",
-          "_customHTML": "<section class=\"info2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"PlayerVimeo\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"text\" title=\"Modal Video\" name=\"modalVideo\" value=\"https://www.youtube.com/watch?v=T3HterzBzOk\">\n        <input type=\"color\" title=\"Play Btn Color\" name=\"playColor\" value=\"#ff1b05\">\n        <input type=\"checkbox\" title=\"Show Description\" name=\"showDescription\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" parallax>\n            <input type=\"color\" value=\"#66458e\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://www.youtube.com/embed/T3HterzBzOk?rel=0&showinfo=0&autoplay=0&loop=0\" title=\"Background Video\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center pb-3 mbr-fonts-style mbr-white\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quo quae eaque dolore ad eos recusandae veniam error alias rerum vitae quidem.\n                </h1>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\">\n                    <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b>\n                </p>\n                <div class=\"mbr-media show-modal align-center py-2\" data-modal=\".modalWindow\">\n                    <div class=\"btn-play\">\n                       <span class=\"play\"></span> \n                    </div>\n                </div>\n\n                <div mbr-text class=\"icon-description align-center font-italic pt-3 mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showDescription\" data-app-selector=\".icon-description, .mbr-media\">Assista Agora</div>\n            </div>\n        </div>\n    </div>\n    <div>\n        <div class=\"modalWindow\" style=\"display: none;\">\n            <div class=\"modalWindow-container\">\n                <div class=\"modalWindow-video-container\">\n                    <div class=\"modalWindow-video\">\n                        <iframe width=\"100%\" height=\"100%\" data-src=\"{{modalVideo}}\" frameborder=\"0\" allowfullscreen=\"1\"></iframe>\n                    </div>\n                    <a class=\"close\" role=\"button\" data-dismiss=\"modal\">\n                        <span aria-hidden=\"true\" class=\"mbri-close mbr-iconfont closeModal\"></span>\n                        <span class=\"sr-only\">Close</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "so3xxZSRcD",
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"PlayerVimeo\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\n        <input type=\"checkbox\" title=\"Popup Video\" name=\"showVideo\" checked>\n        <input type=\"text\" title=\"Modal Video\" name=\"modalVideo\" value=\"https://www.youtube.com/watch?v=T3HterzBzOk\" condition=\"showVideo\">\n        <input type=\"color\" title=\"Play Btn Color\" name=\"playColor\" value=\"#ff1b05\" condition=\"showVideo\">\n\n        <!-- <input type=\"checkbox\" title=\"Show Description\" name=\"showDescription\" checked> -->\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <select name=\"buttonsAlign\" title=\"Buttons Align\">\n          <option value=\"left\" selected>left</option>\n          <option value=\"center\">center</option>\n          <option value=\"right\">right</option>\n        </select>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"@PROJECT_PATH@/assets/images/background7.jpg\" title=\"Background Image\" parallax>\n            <input type=\"color\" value=\"#510938\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://www.youtube.com/watch?v=T3HterzBzOk\" title=\"Background Video\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row  align-items-center\">\n            <div class=\"col-md-12\">\n                <h3 class=\"mbr-fonts-style mbr-section-subtitle mbr-bold align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Challenge</h3>\n                 <h1 class=\"mbr-section-title align-left py-2 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">#esquemapreferido</h1>\n                <p class=\"mbr-text align-left py-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                    Clique no play e assista agora.\n                </p>\n                <div class=\"mbr-media show-modal align-center py-2\" mbr-if=\"showVideo || showButtons\">\n                    <div class=\"btn-play\" data-modal=\".modalWindow\" mbr-if=\"showVideo\">\n                       <span class=\"play\"></span> \n                    </div>\n                    <div class=\"mbr-section-btn align-left\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-secondary\" href=\"https://www.youtube.com/channel/UCfkBnMUsUh9hMx5mUzwJaVA?sub_confirmation=1\" data-app-placeholder=\"Type Text\">inscreva-se</a></div>\n                </div>\n                 \n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showVideo\">\n        <div class=\"modalWindow\">\n            <div class=\"modalWindow-container\">\n                <div class=\"modalWindow-video-container\">\n                    <div class=\"modalWindow-video\">\n                        <iframe width=\"100%\" height=\"100%\" data-src=\"{{modalVideo}}\" frameborder=\"0\" allowfullscreen=\"1\"></iframe>\n                    </div>\n                    <a class=\"close\" role=\"button\" data-dismiss=\"modal\">\n                        <span aria-hidden=\"true\" class=\"mbri-close mbr-iconfont closeModal\"></span>\n                        <span class=\"sr-only\">Close</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div> \n</section>",
+          "_anchor": "header4-19",
+          "_isUserblock": true,
+          "_sourceTheme": "commercem4",
+          "_cid": "so3J1BmnTv",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "info2-17"
+          "_params": {}
         },
         {
           "_customTemplate": true,
