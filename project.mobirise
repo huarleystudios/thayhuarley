@@ -386,7 +386,7 @@
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/top2-vestido.jpg",
-                "active": false,
+                "active": true,
                 "showButtons": true,
                 "showText": true,
                 "showTitle": true,
@@ -405,7 +405,7 @@
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/thay-sex-01-vs2-800x1422.jpg",
-                "active": true,
+                "active": false,
                 "showButtons": true,
                 "showText": true,
                 "showTitle": true,
